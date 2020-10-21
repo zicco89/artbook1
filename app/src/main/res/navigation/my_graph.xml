@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.zikriercaglar.setahatkitabm.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_artFragment"
+            app:destination="@id/artFragment" />
+        <argument
+            android:name="back"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artFragment"
+        android:name="com.zikriercaglar.setahatkitabm.fragment.ArtFragment"
+        android:label="fragment_art"
+        tools:layout="@layout/fragment_art" >
+        <action
+            android:id="@+id/action_artFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="info"
+            app:argType="string"
+            android:defaultValue="new" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="boş" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_artFragment_self"
+            app:destination="@id/artFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <argument
+        android:name="info" />
+</navigation>

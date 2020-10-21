@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/add_art" android:title="Tablo Ekle"></item>
+    <item android:id="@+id/back" android:title="Geri Dön"></item>
+    <item android:id="@+id/update_menu" android:title="Güncelle"></item>
+    <item android:id="@+id/exit" android:title="Çıkış"></item>
+</menu>
